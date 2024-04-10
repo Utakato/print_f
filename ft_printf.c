@@ -34,8 +34,7 @@ int	handle_flags(char flag, va_list *args)
 		return (print_p(va_arg(*args, unsigned long long *)));
 	else if (flag == '%')
 	{
-		write(1, "%", 1);
-		return (1);
+		return write(1, "%", 1);
 	}
 	return (-1);
 }

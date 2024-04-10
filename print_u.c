@@ -25,7 +25,8 @@ int	print_u(unsigned int n)
 	while (len > 0)
 	{
 		len--;
-		ft_putchar_fd(((n / rise_to_power_u(10, len)) + '0'), 1);
+		if (print_c(((n / rise_to_power_u(10, len)) + '0')) == -1)
+			return (-1);
 		n = n % rise_to_power_u(10, len);
 	}
 	return (original_len);

@@ -52,7 +52,8 @@ int	print_x(unsigned int n, char *base)
 	while (len > 0)
 	{
 		len--;
-		ft_putchar_fd(base[(n / rise_to_power_int(16, len))], 1);
+		if (print_c(base[(n / rise_to_power_int(16, len))]) == -1)
+			return (-1);
 		n = n % rise_to_power_int(16, len);
 		i++;
 	}

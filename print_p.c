@@ -17,17 +17,21 @@ int	print_hex(unsigned long long n, char *base);
 int	print_p(unsigned long long *ptr)
 {
 	unsigned long long	num;
+	int hex_result;
 
 	num = (unsigned long long)ptr;
 	if (num == 0)
 	{
-		write(1, "0x0", 3);
-		return (3);
+		return (write(1, "0x0", 3));
 	}
 	else
-	{
-		write(1, "0x", 2);
-		return (2 + print_hex(num, "0123456789abcdef"));
+	{	
+		if (write(1, "0x", 2) == -1)
+			return (-1);
+		hex_result = print_hex(num, "0123456789abcdef");
+		if (hex_result == -1)
+			return (-1);
+		return (2+hex_result);
 	}
 }
 

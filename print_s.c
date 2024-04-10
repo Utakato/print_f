@@ -22,7 +22,7 @@ int	print_s(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (!write(1, &str[i], 1))
+		if (write(1, &str[i], 1) == -1)
 			return (-1);
 		i++;
 	}
