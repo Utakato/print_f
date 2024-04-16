@@ -6,7 +6,7 @@
 /*   By: fschipor <fschipor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 19:40:58 by fschipor          #+#    #+#             */
-/*   Updated: 2024/03/28 22:11:21 by fschipor         ###   ########.fr       */
+/*   Updated: 2024/04/16 19:58:28 by fschipor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include "libft/libft.h"
 # include <stdarg.h>
 # include <unistd.h>
-# include <limits.h>
 
 int	ft_printf(const char *str, ...);
 int	print_c(int c);
