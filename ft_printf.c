@@ -6,7 +6,7 @@
 /*   By: fschipor <fschipor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 19:36:24 by fschipor          #+#    #+#             */
-/*   Updated: 2024/03/28 22:34:02 by fschipor         ###   ########.fr       */
+/*   Updated: 2024/04/16 19:47:54 by fschipor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	handle_flags(char flag, va_list *args)
 		return (print_p(va_arg(*args, unsigned long long *)));
 	else if (flag == '%')
 	{
-		return write(1, "%", 1);
+		return (write(1, "%", 1));
 	}
 	return (-1);
 }
@@ -57,7 +57,6 @@ int	print_next(const char *str, int *i, va_list *args)
 	}
 	return (printed_chars);
 }
-
 
 int	ft_printf(const char *str, ...)
 {

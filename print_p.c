@@ -6,18 +6,18 @@
 /*   By: fschipor <fschipor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 19:38:43 by fschipor          #+#    #+#             */
-/*   Updated: 2024/03/28 22:22:03 by fschipor         ###   ########.fr       */
+/*   Updated: 2024/04/16 19:47:19 by fschipor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_hex(unsigned long long n, char *base);
+int					print_hex(unsigned long long n, char *base);
 
 int	print_p(unsigned long long *ptr)
 {
 	unsigned long long	num;
-	int hex_result;
+	int					hex_result;
 
 	num = (unsigned long long)ptr;
 	if (num == 0)
@@ -25,17 +25,15 @@ int	print_p(unsigned long long *ptr)
 		return (write(1, "0x0", 3));
 	}
 	else
-	{	
+	{
 		if (write(1, "0x", 2) == -1)
 			return (-1);
 		hex_result = print_hex(num, "0123456789abcdef");
 		if (hex_result == -1)
 			return (-1);
-		return (2+hex_result);
+		return (2 + hex_result);
 	}
 }
-
-
 
 int	ft_num_len_ull(unsigned long long n, int base_length)
 {
