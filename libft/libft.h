@@ -6,14 +6,13 @@
 /*   By: fschipor <fschipor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 16:38:06 by fschipor          #+#    #+#             */
-/*   Updated: 2024/03/27 21:21:41 by fschipor         ###   ########.fr       */
+/*   Updated: 2024/04/16 19:55:26 by fschipor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
