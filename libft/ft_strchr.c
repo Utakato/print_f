@@ -6,9 +6,11 @@
 /*   By: fschipor <fschipor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 18:30:13 by fschipor          #+#    #+#             */
-/*   Updated: 2024/04/16 20:03:53 by fschipor         ###   ########.fr       */
+/*   Updated: 2024/04/16 20:05:33 by fschipor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
